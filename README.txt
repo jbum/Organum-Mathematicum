@@ -1,7 +1,7 @@
 Organum.pl - Jim Bumgardner
 
 organum.pl is a script which recreates the music algorithm described in Athanasius Kircher's book
-'Musurgica Universalis' (1650), and from "Organum Mathematicum" by Kaspar Schott.
+'Musurgia Universalis' (1650), and from "Organum Mathematicum" by Kaspar Schott.
 
 For some background information, see Jim's paper:
 
