@@ -1,0 +1,825 @@
+%!PS-Adobe-3.0
+%%Title: samples/UtQueant_c3.abc
+%%Creator: abcm2ps-3.7.21
+%%CreationDate: Apr 02, 2006 14:42
+%%Pages: (atend)
+%%LanguageLevel: 2
+%%EndComments
+%CommandLine: samples/UtQueant_c3.abc -O samples/UtQueant_c3.ps
+
+%%BeginSetup
+/!{bind def}bind def
+/bdef{bind def}!
+/T/translate load def
+/M/moveto load def
+/RM/rmoveto load def
+/RL/rlineto load def
+/RC/rcurveto load def
+/dlw{0.7 setlinewidth}!
+/mkfontext{
+	findfont dup length dict begin
+		{1 index /FID ne {def}{pop pop} ifelse} forall
+		/Encoding ISOLatin1Encoding def
+		currentdict
+	end
+	definefont pop}!
+/Times-Roman-ISO /Times-Roman mkfontext
+/F0{dup 0.8 mul /fh exch def /Times-Roman-ISO exch selectfont}!
+/Times-Italic-ISO /Times-Italic mkfontext
+/F1{dup 0.8 mul /fh exch def /Times-Italic-ISO exch selectfont}!
+/Times-Bold-ISO /Times-Bold mkfontext
+/F2{dup 0.8 mul /fh exch def /Times-Bold-ISO exch selectfont}!
+/Helvetica-ISO /Helvetica mkfontext
+/F3{dup 0.8 mul /fh exch def /Helvetica-ISO exch selectfont}!
+/ZapfChancery-MediumItalic-ISO /ZapfChancery-MediumItalic mkfontext
+/F4{dup 0.8 mul /fh exch def /ZapfChancery-MediumItalic-ISO exch selectfont}!
+/xymove{2 copy /y exch def /x exch def M}!
+/cshow{dup stringwidth pop 2 div neg 0 RM show}!
+/lshow{dup stringwidth pop neg 0 RM show}!
+/showb{	dup currentpoint 3 -1 roll show
+	0.6 setlinewidth
+	exch 2 sub exch 3 sub 3 -1 roll
+	stringwidth pop 4 add fh 4 add rectstroke}!
+/wln{M 0.8 setlinewidth 0 RL stroke}!
+/whf{3 add 3 3 1 roll wln}!
+/tclef{	M
+	-1.9 3.7 RM
+	-3.3 1.9 -3.1 6.8 2.4 8.6 RC
+	7.0 0.0 9.8 -8.0 4.1 -11.7 RC
+	-5.2 -2.4 -12.5 0.0 -13.3 6.2 RC
+	-0.7 6.4 4.15 10.5 10.0 15.3 RC
+	4.0 4.0 3.6 6.1 2.8 9.6 RC
+	-2.3 -1.5 -4.7 -4.8 -4.5 -8.5 RC
+	0.8 -12.2 3.4 -17.3 3.5 -26.3 RC
+	0.3 -4.4 -1.2 -6.2 -3.8 -6.2 RC
+	-3.7 -0.1 -5.8 4.3 -2.8 6.1 RC
+	3.9 1.9 6.1 -4.6 1.4 -4.8 RC
+	0.7 -1.2 4.6 -0.8 4.2 4.2 RC
+	-0.2 10.3 -3.0 15.7 -3.5 28.3 RC
+	0.0 4.1 0.6 7.4 5.0 10.6 RC
+	2.3 -3.2 2.9 -10.0 1.0 -12.7 RC
+	-2.4 -4.3 -11.5 -10.3 -11.8 -15.0 RC
+	0.4 -7.0 6.9 -8.5 11.7 -6.1 RC
+	3.9 3.0 1.3 8.8 -3.7 8.1 RC
+	-4.0 -0.2 -4.8 -3.1 -2.7 -5.7 RC
+	fill}!
+/stclef{exch 0.85 div exch 0.85 div gsave 0.85 dup scale tclef grestore}!
+/octu{/Times-Roman 12 selectfont M -1.5 34 RM (8) show}!
+/octl{/Times-Roman 12 selectfont M -3.5 -19 RM (8) show}!
+/bclef{	M
+	-8.8 3.5 RM
+	6.3 1.9 10.2 5.6 10.5 10.8 RC
+	0.3 4.9 -0.5 8.1 -2.6 8.8 RC
+	-2.5 1.2 -5.8 -0.7 -5.9 -4.1 RC
+	1.8 3.1 6.1 -0.6 3.1 -3.0 RC
+	-3.0 -1.4 -5.7 2.3 -1.9 7.0 RC
+	2.6 2.3 11.4 0.6 10.1 -8.0 RC
+	-0.1 -4.6 -5.0 -10.2 -13.3 -11.5 RC
+	15.5 17.0 RM
+	0.0 1.5 2.0 1.5 2.0 0.0 RC
+	0.0 -1.5 -2.0 -1.5 -2.0 0.0 RC
+	0.0 -5.5 RM
+	0.0 1.5 2.0 1.5 2.0 0.0 RC
+	0.0 -1.5 -2.0 -1.5 -2.0 0.0 RC
+	fill}!
+/sbclef{exch 0.85 div exch 0.85 div gsave 0.85 dup scale 0 3 T bclef grestore}!
+/cchalf{0 0 M 0.0 12.0 RM
+	2.6 5.0 RL
+	2.3 -5.8 5.2 -2.4 4.7 1.6 RC
+	0.4 3.9 -3.0 6.7 -5.1 4.0 RC
+	4.1 0.5 0.9 -5.3 -0.9 -1.4 RC
+	-0.5 3.4 6.5 4.3 7.8 -0.8 RC
+	1.9 -5.6 -4.1 -9.8 -6.0 -5.4 RC
+	-1.6 -3.0 RL
+	fill}!
+/cclef{	gsave T
+	cchalf 0 24 T 1 -1 scale cchalf
+	-5.0 0 M 0 24 RL 3 0 RL 0 -24 RL fill
+	-0.5 0 M 0 24 RL 0.8 setlinewidth stroke grestore}!
+/scclef{exch 0.85 div exch 0.85 div gsave 0.85 dup scale
+	0 2 T cclef grestore}!
+/pclef{	M 1.4 setlinewidth -2.7 2 RM
+	0 20 RL 5.4 0 RL 0 -20 RL -5.4 0 RL stroke}!
+/spclef{pclef}!
+/bm{	M 3 copy RL neg 0 exch RL
+	neg exch neg exch RL 0 exch RL fill}!
+/bnum{M /Times-Italic 12 selectfont cshow}!
+/hbr{M dlw lineto 0 -3 RL stroke}!
+/r00{	xymove
+	-1 6 RM 0 -12 RL 3 0 RL 0 12 RL fill}!
+/r0{	xymove
+	-1 6 RM 0 -6 RL 3 0 RL 0 6 RL fill}!
+/r1{	xymove
+	-3 6 RM 0 -3 RL 7 0 RL 0 3 RL fill}!
+/r2{	xymove
+	-3 0 RM 0 3 RL 7 0 RL 0 -3 RL fill}!
+/r4{	xymove
+	-0.5 8.9 RM
+	1.3 -3.4 RL
+	-2.0 -4.5 RL
+	3.1 -4.8 RL
+	-3.2 3.5 -5.8 -1.4 -1.4 -3.8 RC
+	-1.9 2.0 -0.8 5.0 2.4 2.6 RC
+	-2.2 4.2 RL
+	0.0 0.0 2.0 4.7 2.1 4.7 RC
+	-3.3 5.0 RL
+	fill}!
+/r8e{	-1.5 -1.5 -2.4 -2.0 -3.6 -2.0 RC
+	2.4 2.8 -2.8 4.0 -2.8 1.2 RC
+	0.0 -2.7 4.3 -2.4 5.9 -0.6 RC
+	fill}!
+/r8{	xymove
+	0.5 setlinewidth 3.3 4.0 RM
+	-3.4 -9.6 RL stroke
+	x y M 3.4 4.0 RM r8e}!
+/r16{	xymove
+	0.5 setlinewidth 3.3 4.0 RM
+	-4.0 -15.6 RL stroke
+	x y M 3.4 4.0 RM r8e
+	x y M 1.9 -2.0 RM r8e}!
+/r32{	xymove
+	0.5 setlinewidth 4.8 10.0 RM
+	-5.5 -21.6 RL stroke
+	x y M 4.9 10.0 RM r8e
+	x y M 3.4 4.0 RM r8e
+	x y M 1.9 -2.0 RM r8e}!
+/r64{	xymove
+	0.5 setlinewidth 4.8 10.0 RM
+	-7.0 -27.6 RL stroke
+	x y M 4.9 10.0 RM r8e
+	x y M 3.4 4.0 RM r8e
+	x y M 1.9 -2.0 RM r8e
+	x y M 0.3 -8.0 RM r8e}!
+/dt{y add exch x add exch M currentpoint 1.2 0 360 arc fill}!
+/hld{	1.5 add 2 copy 1.5 add M currentpoint 1.3 0 360 arc
+	M -7.5 0 RM
+	0 11.5 15 11.5 15 0 RC
+	-0.25 0 RL
+	-1.25 9 -13.25 9 -14.50 0 RC
+	fill}!
+/dnb{	dlw M
+	-3.2 2.0 RM
+	0.0 7.2 RL
+	6.4 0.0 RM
+	0.0 -7.2 RL
+	currentpoint stroke M
+	-6.4 4.8 RM
+	0.0 2.4 RL
+	6.4 0.0 RL
+	0.0 -2.4 RL
+	fill}!
+/upb{	dlw M -2.6 9.4 RM
+	2.6 -8.8 RL
+	2.6 8.8 RL
+	stroke}!
+/grm{	M -5 2.5 RM
+	5.0 8.5 5.5 -4.5 10.0 2.0 RC
+	-5.0 -8.5 -5.5 4.5 -10.0 -2.0 RC fill}!
+/stc{M currentpoint 1.2 0 360 arc fill}!
+/emb{	1.2 setlinewidth 1 setlinecap M
+	-2.5 0 RM 5 0 RL stroke 0 setlinecap}!
+/cpu{	M -6 0 RM
+	0.4 7.3 11.3 7.3 11.7 0 RC
+	-1.3 6 -10.4 6 -11.7 0 RC fill}!
+/sld{	M -7.2 -4.8 RM
+	1.8 -0.7 4.5 0.2 7.2 4.8 RC
+	-2.1 -5.0 -5.4 -6.8 -7.6 -6.0 RC fill}!
+/trl{	/Times-BoldItalic 16 selectfont
+	M -4 2 RM (tr) show}!
+/umrd{	4 add M
+	2.2 2.2 RL 2.1 -2.9 RL 0.7 0.7 RL
+	-2.2 -2.2 RL -2.1 2.9 RL -0.7 -0.7 RL
+	-2.2 -2.2 RL -2.1 2.9 RL -0.7 -0.7 RL
+	2.2 2.2 RL 2.1 -2.9 RL 0.7 0.7 RL fill}!
+/lmrd{	2 copy umrd 8 add M
+	0.6 setlinewidth 0 -8 RL stroke}!
+/fng{/Bookman-Demi 8 selectfont M -3 1 RM show}!
+/dacs{/Times-Roman 16 selectfont 3 add M cshow}!
+/brth{/Times-BoldItalic 30 selectfont 6 add M (,) show}!
+/pf{/Times-BoldItalic 16 selectfont 5 add M cshow}!
+/sfz{	exch 4 sub exch 5 add M pop
+	/Times-Italic 14 selectfont (s) show
+	/Times-BoldItalic 16 selectfont (f) show
+	/Times-Italic 14 selectfont (z) show}!
+/coda{	1 setlinewidth 2 add 2 copy M 0 20 RL
+	2 copy 10 add exch -10 add exch M 20 0 RL stroke
+	10 add 6 0 360 arc 1.7 setlinewidth stroke}!
+/sgno{	M 0 3 RM currentpoint currentpoint currentpoint
+	1.5 -1.7 6.4 0.3 3.0 3.7 RC
+	-10.4 7.8 -8.0 10.6 -6.5 11.9 RC
+	4.0 1.9 5.9 -1.7 4.2 -2.6 RC
+	-1.3 -0.7 -2.9 1.3 -0.7 2.0 RC
+	-1.5 1.7 -6.4 -0.3 -3.0 -3.7 RC
+	10.4 -7.8 8.0 -10.6 6.5 -11.9 RC
+	-4.0 -1.9 -5.9 1.7 -4.2 2.6 RC
+	1.3 0.7 2.9 -1.3 0.7 -2.0 RC
+	fill
+	M 0.8 setlinewidth -6.0 1.2 RM 12.6 12.6 RL stroke
+	7 add exch -6 add exch 1.2 0 360 arc fill
+	8 add exch 6 add exch 1.2 0 360 arc fill}!
+/cresc{	1.2 setlinewidth 6 add M
+	dup 4 RL neg 4 RL stroke}!
+/dplus{	1.2 setlinewidth M 0 0.5 RM 0 6 RL
+	-3 -3 RM 6 0 RL stroke}!
+/accent{1.2 setlinewidth M -4 2 RM
+	8 2 RL -8 2 RL stroke}!
+/turn{	M 5.2 8 RM
+	1.4 -0.5 0.9 -4.8 -2.2 -2.8 RC
+	-4.8 3.5 RL
+	-3.0 2.0 -5.8 -1.8 -3.6 -4.4 RC
+	1.0 -1.1 2.0 -0.8 2.1 0.1 RC
+	0.1 0.9 -0.7 1.2 -1.9 0.6 RC
+	-1.4 0.5 -0.9 4.8 2.2 2.8 RC
+	4.8 -3.5 RL
+	3.0 -2.0 5.8 1.8 3.6 4.4 RC
+	-1.0 1.1 -2 0.8 -2.1 -0.1 RC
+	-0.1 -0.9 0.7 -1.2 1.9 -0.6 RC
+	fill}!
+/turnx{	2 copy turn M
+	0.6 setlinewidth 0 1.5 RM 0 9 RL stroke}!
+/lphr{1.2 setlinewidth M 0 -18 RL stroke}!
+/mphr{1.2 setlinewidth M 0 -12 RL stroke}!
+/sphr{1.2 setlinewidth M 0 -6 RL stroke}!
+/ltr{	gsave 4 add T
+	0 6 3 -1 roll{
+		0 1 1{
+			0.0 0.4 M
+			2.0 1.9 3.4 2.3 3.9 0.0 curveto
+			2.1 0.0 lineto
+			1.9 0.8 1.4 0.7 0.0 -0.4 curveto
+			fill
+			pop 180 rotate -6 0 translate
+		} for
+		pop 6 0 translate
+	} for
+	grestore}!
+/arp{gsave 90 rotate exch neg ltr grestore}!
+/wedge{1 add M -1.5 5 RL 3 0 RL -1.5 -5 RL fill}!
+/opend{dlw M currentpoint 3 add 2.5 -90 270 arc stroke}!
+/snap{	dlw M currentpoint -3 6 RM
+	0 5 6 5 6 0 RC
+	0 -5 -6 -5 -6 0 RC
+	5 add M 0 -6 RL stroke}!
+/thumb{	dlw M currentpoint -2.5 7 RM
+	0 6 5 6 5 0 RC
+	0 -6 -5 -6 -5 0 RC
+	2 add M 0 -4 RL stroke}!
+/hl{	0.8 setlinewidth x -6.5 add exch M
+	13 0 RL stroke}!
+/hl1{	0.8 setlinewidth x -8 add exch M
+	16 0 RL stroke}!
+/sh0{	gsave T 0.9 setlinewidth
+	-1.2 -8.4 M 0 15.4 RL
+	1.4 -7.2 M 0 15.4 RL stroke
+	-2.6 -3 M 5.4 1.6 RL 0 -2.2 RL -5.4 -1.6 RL 0 2.2 RL fill
+	-2.6 3.4 M 5.4 1.6 RL 0 -2.2 RL -5.4 -1.6 RL 0 2.2 RL fill
+	grestore}!
+/sh{x add y sh0}!
+/ft0{	gsave T 0.8 setlinewidth
+	-1.8 2.5 M
+	6.4 3.3 6.5 -3.6 0 -6.6 RC
+	4.6 3.9 4.5 7.6 0 5.7 RC
+	currentpoint fill M
+	0 7.1 RM 0 -12.6 RL stroke
+	grestore}!
+/ft{x add y ft0}!
+/nt0{	gsave T 0.5 setlinewidth
+	-2 -4.3 M 0 12.2 RL
+	1.3 -7.8 M 0 12.2 RL stroke
+	2.1 setlinewidth
+	-2 -2.9 M 3.3 0.6 RL
+	-2 2.4 M 3.3 0.6 RL stroke
+	grestore}!
+/nt{x add y nt0}!
+/ftx{	M -1.4 2.7 RM
+	5.7 3.1 5.7 -3.6 0.0 -6.7 RC
+	3.9 4.0 4.0 7.6 0.0 5.8 RC
+	currentpoint fill M
+	dlw 0 7.1 RM 0 -12.4 RL stroke}!
+/dft0{2 copy exch 2.5 sub exch ftx exch 1.5 add exch ftx}!
+/dft{x add y dft0}!
+/dsh0{	2 copy M 0.7 setlinewidth
+	-2 -2 RM 4 4 RL
+	-4 0 RM 4 -4 RL stroke
+	0.5 setlinewidth 2 copy M 1.3 -1.3 RM
+	2 -0.2 RL 0.2 -2 RL -2 0.2 RL -0.2 2 RL fill
+	2 copy M 1.3 1.3 RM
+	2 0.2 RL 0.2 2 RL -2 -0.2 RL -0.2 -2 RL fill
+	2 copy M -1.3 1.3 RM
+	-2 0.2 RL -0.2 2 RL 2 -0.2 RL 0.2 -2 RL fill
+	M -1.3 -1.3 RM
+	-2 -0.2 RL -0.2 -2 RL 2 0.2 RL 0.2 2 RL fill}!
+/dsh{x add y dsh0}!
+/tempstr 1 string def
+/sharp_glyph{
+	fh 0.4 mul 0 RM currentpoint
+	gsave T fh 0.08 mul dup scale 0 7 sh0 grestore
+	fh 0.4 mul 0 RM}!
+/flat_glyph{
+	fh 0.4 mul 0 RM currentpoint
+	gsave T fh 0.08 mul dup scale 0 5 ft0 grestore
+	fh 0.4 mul 0 RM}!
+/nat_glyph{
+	fh 0.4 mul 0 RM currentpoint
+	gsave T fh 0.08 mul dup scale 0 7 nt0 grestore
+	fh 0.4 mul 0 RM}!
+/gcshow{
+	{dup 129 eq {sharp_glyph}
+	  {dup 130 eq {flat_glyph}
+	    {dup 131 eq {nat_glyph}
+		{tempstr 0 2 index put tempstr show}
+		ifelse}
+	    ifelse}
+	  ifelse pop}
+	forall}!
+/box{0.6 setlinewidth rectstroke}!
+/bar{M dlw 0 exch RL stroke}!
+/dabar{[5] 0 setdash bar [] 0 setdash}!
+/thbar{M dup 0 exch RL 3 0 RL 0 exch neg RL fill}!
+/rdots{	9 add M currentpoint 2 copy 1.2 0 360 arc
+	6 add M currentpoint 1.2 0 360 arc fill}!
+/csig{	M
+	1.0 17.3 RM
+	0.9 -0.0 2.3 -0.7 2.4 -2.2 RC
+	-1.2 2.0 -3.6 -0.1 -1.6 -1.7 RC
+	2.0 -1.0 3.8 3.5 -0.8 4.7 RC
+	-2.0 0.4 -6.4 -1.3 -5.8 -7.0 RC
+	0.4 -6.4 7.9 -6.8 9.1 -0.7 RC
+	-2.3 -5.6 -6.7 -5.1 -6.8 0.0 RC
+	-0.5 4.4 0.7 7.5 3.5 6.9 RC
+	fill}!
+/ctsig{dlw 2 copy csig 4 add M 0 16 RL stroke}!
+/tsig{	M gsave /Times-Bold 16 selectfont 1.2 1 scale
+	0 1 RM currentpoint 3 -1 roll cshow
+	M 0 12 RM cshow grestore}!
+/stsig{	M gsave /Times-Bold 18 selectfont 1.2 1 scale
+	0 6 RM cshow grestore}!
+/staff{	M dlw dup 0 RL dup neg 6 RM
+	dup 0 RL dup neg 6 RM
+	dup 0 RL dup neg 6 RM
+	dup 0 RL dup neg 6 RM
+	0 RL stroke}!
+/sep0{dlw 0 M 0 lineto stroke}!
+/hbrce{	-2.5 1.0 RM
+	-4.5 -4.6 -7.5 -12.2 -4.4 -26.8 RC
+	3.5 -14.3 3.2 -21.7 -2.1 -24.2 RC
+	7.4 2.4 7.3 14.2 3.5 29.5 RC
+	-2.7 9.5 -1.5 16.2 3.0 21.5 RC
+	fill}!
+/brace{	gsave T 0 0 M 0.01 mul 1.0 exch scale hbrce
+	0 -100 M 1 -1 scale hbrce grestore}!
+/bracket{M dlw -5 2 RM currentpoint
+	-1.7 2 RM 10.5 -1 12 4.5 12 3.5 RC
+	0 -1 -3.5 -5.5 -8.5 -5.5 RC fill
+	3 setlinewidth M 0 2 RM
+	0 exch neg -8 add RL currentpoint stroke
+	dlw M -1.7 0 RM
+	10.5 1 12 -4.5 12 -3.5 RC
+	0 1 -3.5 5.5 -8.5 5.5 RC fill}!
+/mrest{	gsave T 1 setlinewidth
+	-20 6 M 0 12 RL 20 6 M 0 12 RL stroke
+	5 setlinewidth -20 12 M 40 0 RL stroke
+	/Times-Bold 15 selectfont 0 28 M cshow grestore}!
+/mrep{	2 copy 2 copy
+	M -5 16 RM currentpoint 1.4 0 360 arc
+	M 5 8 RM currentpoint 1.4 0 360 arc
+	M -7 6 RM 11 12 RL 3 0 RL -11 -12 RL -3 0 RL
+	fill}!
+/mrep2{	2 copy 2 copy
+	M -5 18 RM currentpoint 1.4 0 360 arc
+	M 5 6 RM currentpoint 1.4 0 360 arc fill
+	M 1.8 setlinewidth
+	-7 4 RM 14 10 RL -14 -4 RM 14 10 RL
+	stroke}!
+/repbra{gsave dlw T 0 -20 M
+	0 20 3 index 1 ne {RL} {RM} ifelse 0 RL 0 ne {0 -20 RL} if stroke
+	4 -13 M show grestore}!
+/SL{M curveto RL curveto fill}!
+/dsp{dup stringwidth pop}!
+/glue{	2 copy length exch length add string dup 4 2 roll 2 index 0 3 index
+	putinterval exch length exch putinterval}!
+/TXT{/txt exch def}!
+/rejoin{( ) search pop exch glue}!
+/measure{dsp txt stringwidth pop add textwidth 2 add gt}!
+/join{txt exch glue TXT}!
+/find{search {pop 3 -1 roll 1 add 3 1 roll}{pop exit} ifelse}!
+/spacecount{0 exch ( ) {find} loop}!
+/jproc{dsp textwidth exch sub exch dup spacecount}!
+/popzero{dup 0 eq {pop}{div} ifelse}!
+/justify{jproc 1 sub 3 2 roll exch popzero 0 32 4 3 roll widthshow} def
+/P1{	/textwidth exch def () TXT
+	dup spacecount{
+		rejoin measure {gsave txt show grestore LF () TXT join}{join} ifelse
+	} repeat gsave txt show grestore LF () TXT pop}!
+/P2{	/textwidth exch def () TXT
+	dup spacecount{
+		rejoin measure {gsave txt justify grestore LF () TXT join}{join} ifelse
+	} repeat gsave txt show grestore LF () TXT pop}!
+/hd{	xymove
+	3.5 2.0 RM
+	-2.0 3.5 -9.0 -0.5 -7.0 -4.0 RC
+	2.0 -3.5 9.0 0.5 7.0 4.0 RC fill}!
+/Hd{	xymove
+	3.0 1.6 RM
+	-1.0 1.8 -7.0 -1.4 -6.0 -3.2 RC
+	1.0 -1.8 7.0 1.4 6.0 3.2 RC
+	0.5 0.3 RM
+	2.0 -3.8 -5.0 -7.6 -7.0 -3.8 RC
+	-2.0 3.8 5.0 7.6 7.0 3.8 RC
+	fill}!
+/HD{	xymove
+	-1.6 2.4 RM
+	2.8 1.6 6.0 -3.2 3.2 -4.8 RC
+	-2.8 -1.6 -6.0 3.2 -3.2 4.8 RC
+	7.2 -2.4 RM
+	0.0 1.8 -2.2 3.2 -5.6 3.2 RC
+	-3.4 0.0 -5.6 -1.4 -5.6 -3.2 RC
+	0.0 -1.8 2.2 -3.2 5.6 -3.2 RC
+	3.4 0.0 5.6 1.4 5.6 3.2 RC
+	fill}!
+/HDD{	dlw HD
+	x y M -6 -4 RM 0 8 RL
+	x y M 6 -4 RM 0 8 RL stroke}!
+/breve{	xymove
+	2.5 setlinewidth -6 -2.7 RM 12 0 RL
+	0 5.4 RM -12 0 RL stroke
+	dlw x y M -6 -5 RM 0 10 RL
+	x y M 6 -5 RM 0 10 RL stroke}!
+/longa{	xymove
+	2.5 setlinewidth -6 -2.7 RM 12 0 RL
+	0 5.4 RM -12 0 RL stroke
+	dlw x y M -6 -5 RM 0 10 RL
+	x y M 6 -10 RM 0 15 RL stroke}!
+/tw_head{/Helvetica 8.0 selectfont
+	0 -45 M 90 rotate (WHISTLE) show -90 rotate
+	/Helvetica-Bold 36.0 selectfont
+	0 -45 M show .5 setlinewidth newpath}!
+/tw_under{
+	1 index 2.5 sub -4 M 2.5 -2.5 RL 2.5 2.5 RL
+	-2.5 -2.5 RM 0 6 RL stroke}!
+/tw_over{
+	1 index 2.5 sub -3 M 2.5 2.5 RL 2.5 -2.5 RL
+	-2.5 2.5 RM 0 -6 RL stroke}!
+/tw_0{7 sub 2 copy 3.5 sub 3 0 360 arc stroke}!
+/tw_1{7 sub 2 copy 3.5 sub 2 copy 3 90 270 arc fill 3 270 90 arc stroke}!
+/tw_2{7 sub 2 copy 3.5 sub 3 0 360 arc fill}!
+/tw_p{pop -55 M 0 6 RL -3 -3 RM 6 0 RL stroke}!
+/tw_pp{	pop 3 sub -53.5 M 6 0 RL
+	-1.5 -1.5 RM 0 3 RL
+	-3 0 RM 0 -3 RL stroke}!
+/su{dlw x y M 3.5 1.0 RM 1.0 sub 0 exch RL stroke}!
+/sd{dlw x y M -3.5 -1.0 RM neg 1.0 add 0 exch RL stroke}!
+/sfu{	dlw x y M 3.5 1.0 RM
+	1.0 sub 0 exch RL currentpoint stroke
+	M dup 1 eq
+	  {
+		pop
+		0.6 -5.6 9.6 -9.0 5.6 -18.4 RC
+		1.6 6.0 -1.3 11.6 -5.6 12.8 RC
+		fill
+	  }{
+		2 1 3 -1 roll {
+			pop currentpoint
+			0.9 -3.7 9.1 -6.4 6.0 -12.4 RC
+			1.0 5.4 -4.2 8.4 -6.0 8.4 RC
+			fill -5.4 add M
+		} for
+		1.2 -3.2 9.6 -5.7 5.6 -14.6 RC
+		1.6 5.4 -1.0 10.2 -5.6 11.4 RC
+		fill
+	  }
+	ifelse}!
+/sfd{	dlw x y M -3.5 -1.0 RM
+	neg 1.0 add 0 exch RL currentpoint stroke
+	M dup 1 eq
+	  {
+		pop
+		0.6 5.6 9.6 9.0 5.6 18.4 RC
+		1.6 -6.0 -1.3 -11.6 -5.6 -12.8 RC
+		fill
+	  }{
+		2 1 3 -1 roll {
+			pop currentpoint
+			0.9 3.7 9.1 6.4 6.0 12.4 RC
+			1.0 -5.4 -4.2 -8.4 -6.0 -8.4 RC
+			fill 5.4 add M
+		} for
+			1.2 3.2 9.6 5.7 5.6 14.6 RC
+			1.6 -5.4 -1.0 -10.2 -5.6 -11.4 RC
+		fill
+	  }
+	ifelse}!
+/sfs{	dlw x y M -3.5 -1.0 RM
+	neg 1.0 add 0 exch RL currentpoint stroke
+	M 1 1 3 -1 roll {
+		pop currentpoint
+		7 3.2 RL
+		0 3.2 RL
+		-7 -3.2 RL
+		fill 5.4 add M
+	} for}!
+/ghd{	xymove
+	-1.3 1.5 RM
+	2.4 2 5 -1 2.6 -3 RC
+	-2.4 -2 -5 1 -2.6 3 RC fill}!
+/gu{	0.6 setlinewidth x y M
+	2.0 0 RM 0 exch RL stroke}!
+/sgu{	0.6 setlinewidth x y M 2.0 0 RM
+	0 exch RL currentpoint stroke
+	M dup 1 eq
+	  {
+		pop
+		0.6 -3.4 5.6 -3.8 3.0 -10.0 RC
+		1.2 4.4 -1.4 7.0 -3.0 7.0 RC
+		fill
+	  }{
+		1 1 3 -1 roll {
+			pop currentpoint
+			1.0 -3.2 5.6 -2.8 3.2 -8.0 RC
+			1.4 4.8 -2.4 5.4 -3.2 5.2 RC
+			fill -3.5 add M
+		} for
+	  }
+	ifelse}!
+/sgs{	0.6 setlinewidth x y M 2.0 0 RM
+	0 exch RL currentpoint stroke
+	M 1 1 3 -1 roll {
+		pop currentpoint
+		3 -1.5 RL 0 -2 RL -3 1.5 RL
+		closepath fill -3 add M
+	} for}!
+/ga{x y M -1 4 RM 9 5 RL stroke}!
+/ghl{	0.6 setlinewidth x -3 add exch M
+	6 0 RL stroke}!
+/gsl{dlw M curveto stroke}!
+/gsc{gsave x add y T 0.7 dup scale 0 0}!
+/gsh{gsc sh0 grestore}!
+/gnt{gsc nt0 grestore}!
+/gft{gsc ft0 grestore}!
+/gdsh{gsc dsh0 grestore}!
+/gdft{gsc dft0 grestore}!
+0 setlinecap 0 setlinejoin
+%%EndSetup
+%%Page: 1 1
+gsave 0 763.6 T
+0.75 dup scale
+67.2 0 T
+
+% --- 1 (Ut Queant Laxis Resonare Fibris) ---
+0 -22.68 T
+0 -29.67 T
+24.0 F4  (Ut Queant Laxis Resonare Fibris) 340.8 0 M cshow
+18.0 F4 0 -5.67 T
+0 -18.00 T
+681.6 0 M (Athanasius Kircher \(German/Jesuit\)) lshow
+0 -5.67 T
+61.57 0 T
+15.0 F2 25.0 -17.0 M gsave 0.70 dup scale 15 3 RM currentpoint
+hd 20 su grestore 15.40 0 RM
+( = 220) show
+13.0 F2 -30.8 -73.5 M (Cantus) cshow
+-30.8 -91.5 M (Altus) cshow
+-30.8 -109.5 M (Tenor) cshow
+-30.8 -127.5 M (Bassus) cshow
+620.0 0 -157.2 staff
+620.0 0 -60.0 staff
+121.2 0.0 -157.2 bar
+121.2 0.0 -36.0 brace
+12.0 -60.0  tclef
+50.5 -45.0 HD
+121.2 92.1 -157.2 bar 
+108.3 -45.0 Hd 20.0 su
+155.2 -48.0 Hd -9.0 ft 20.0 su
+121.2 188.4 -157.2 bar 
+202.7 -51.0 Hd 20.0 su
+243.3 -54.0 Hd -9.0 sh 20.0 su
+121.2 276.3 -157.2 bar 
+292.5 -57.0 HD
+121.2 332.6 -157.2 bar 
+346.1 -57.0 Hd 20.0 su
+381.4 -51.0 Hd 20.0 su
+121.2 413.3 -157.2 bar 
+428.1 -51.0 Hd 20.0 su
+466.5 -51.0 Hd 20.0 su
+121.2 497.9 -157.2 bar 
+519.4 -54.0 HD -12.0 sh
+121.2 558.9 -157.2 bar 
+577.0 -51.0 HD
+121.2 620.0 -157.2 bar 
+335.0 -46.5 303.6 -46.5 294.5 -51.8 0 0.2 302.1 -47.5 336.5 -47.5 344.1 -52.0 294.5 -52.0 SL
+50.5 -51.0 HD
+108.3 -51.0 Hd 20.0 sd
+155.2 -54.0 Hd -16.0 sh 20.0 sd
+202.7 -57.0 Hd 20.0 sd
+243.3 -60.0 Hd 20.0 sd
+292.5 -63.0 HD
+346.1 -63.0 Hd 18.0 sd
+381.4 -60.0 Hd 20.0 sd
+428.1 -57.0 Hd 20.0 sd
+466.5 -63.0 Hd 18.0 sd
+519.4 -60.0 HD
+577.0 -60.0 HD
+331.3 -73.4 302.9 -73.4 294.5 -68.2 0 -0.2 301.5 -72.4 332.6 -72.4 339.6 -68.0 294.5 -68.0 SL
+13.0 F2 30.0 -96.0 M (1. Ut) show 97.7 -96.0 M (que) show 130.1 -96.0 whf 145.8 -96.0 M (ant) show 196.0 -96.0 M (la) show 218.5 -96.0 whf 234.2 -96.0 M (xis) show 285.5 -96.0 M (re) show 314.1 -96.0 whf 352.9 -96.0 whf 373.8 -96.0 M (so) show 401.6 -96.0 whf 420.3 -96.0 M (na) show 444.8 -96.0 whf 459.5 -96.0 M (re) show 513.3 -96.0 M (fi) show 531.3 -96.0 whf 553.5 -96.0 whf 566.1 -96.0 M (bris) show 
+50.5 -121.2 HD -127.2 hl1 -121.2 hl1
+108.3 -121.2 Hd 16.0 su -127.2 hl -121.2 hl
+155.2 -121.2 Hd 16.0 su -127.2 hl -121.2 hl
+202.7 -127.2 Hd 18.0 su -127.2 hl
+243.3 -127.2 Hd 18.0 su -127.2 hl
+292.5 -133.2 HD
+346.1 -133.2 Hd 20.0 su
+381.4 -127.2 Hd 18.0 su -127.2 hl
+428.1 -124.2 Hd 16.0 su -127.2 hl
+466.5 -133.2 Hd 20.0 su
+519.4 -130.2 HD -12.0 ft
+577.0 -127.2 HD -127.2 hl1
+335.0 -123.7 303.6 -123.7 294.5 -129.0 0 0.2 302.1 -124.7 336.5 -124.7 344.1 -129.2 294.5 -129.2 SL
+12.0 -157.2  bclef
+50.5 -133.2 HD
+108.3 -133.2 Hd 20.0 sd
+155.2 -142.2 Hd 20.0 sd
+202.7 -139.2 Hd 20.0 sd
+243.3 -148.2 Hd 20.0 sd
+292.5 -145.2 HD
+346.1 -145.2 Hd 20.0 sd
+381.4 -133.2 Hd 20.0 sd
+428.1 -145.2 Hd 20.0 sd
+466.5 -139.2 Hd 20.0 sd
+519.4 -142.2 HD
+577.0 -154.2 HD
+331.3 -154.6 302.9 -154.6 294.5 -149.4 0 -0.2 301.5 -153.6 332.6 -153.6 339.6 -149.2 294.5 -149.2 SL
+0 -180.20 T
+-61.57 0 T
+681.6 0 -140.2 staff
+681.6 0 -47.0 staff
+117.2 0.0 -140.2 bar
+117.2 0.0 -23.0 brace
+12.0 -47.0  tclef
+38.5 -38.0 HD
+117.2 84.4 -140.2 bar 
+99.4 -38.0 Hd 20.0 su
+143.6 -41.0 Hd -9.0 sh 20.0 su
+117.2 178.8 -140.2 bar 
+194.5 -38.0 Hd 20.0 su
+239.2 -38.0 Hd 20.0 su
+117.2 276.4 -140.2 bar 
+304.9 -35.0 HD -12.0 ft
+117.2 350.0 -140.2 bar 
+375.5 -35.0 Hd -9.0 ft 20.0 su
+420.3 -35.0 Hd -9.0 ft 20.0 su
+117.2 456.5 -140.2 bar 
+471.0 -38.0 Hd 20.0 su
+512.1 -38.0 Hd 20.0 su
+117.2 546.7 -140.2 bar 
+568.2 -44.0 HD
+117.2 612.4 -140.2 bar 
+633.9 -41.0 HD -12.0 sh
+117.2 681.6 -140.2 bar 
+361.8 -25.2 318.6 -25.2 306.9 -30.8 0 0.2 316.6 -26.2 363.8 -26.2 373.5 -31.0 306.9 -31.0 SL
+38.5 -47.0 HD
+99.4 -47.0 Hd 20.0 sd
+143.6 -47.0 Hd 20.0 sd
+194.5 -47.0 Hd 20.0 sd
+239.2 -44.0 Hd 20.0 sd
+304.9 -41.0 HD -19.0 sh
+375.5 -41.0 Hd -16.0 sh 20.0 sd
+420.3 -41.0 Hd -16.0 sh 20.0 sd
+471.0 -47.0 Hd 20.0 sd
+512.1 -47.0 Hd 20.0 sd
+568.2 -50.0 HD
+633.9 -47.0 HD
+358.0 -50.7 317.9 -50.7 306.9 -45.2 0 -0.2 316.1 -49.7 359.8 -49.7 369.0 -45.0 306.9 -45.0 SL
+13.0 F2 30.0 -82.0 M (mi) show 54.9 -82.0 whf 78.9 -82.0 whf 92.4 -82.0 M (ra) show 135.8 -82.0 M (ge) show 165.5 -82.0 whf 185.4 -82.0 M (sto) show 213.0 -82.0 whf 227.7 -82.0 M (rum) show 297.9 -82.0 M (fa) show 324.1 -82.0 whf 358.1 -82.0 whf 392.1 -82.0 whf 410.6 -82.0 M (mu) show 445.2 -82.0 whf 465.2 -82.0 M (li) show 505.1 -82.0 M (tu) show 526.0 -82.0 whf 549.5 -82.0 whf 562.7 -82.0 M (o) show 581.3 -82.0 whf 607.7 -82.0 whf 622.4 -82.0 M (rum) show 
+38.5 -110.2 HD -110.2 hl1
+99.4 -110.2 Hd 18.0 su -110.2 hl
+143.6 -113.2 Hd -9.0 ft 18.0 su
+194.5 -110.2 Hd 18.0 su -110.2 hl
+239.2 -110.2 Hd 18.0 su -110.2 hl
+304.9 -107.2 HD -110.2 hl1
+375.5 -107.2 Hd 16.0 su -110.2 hl
+420.3 -107.2 Hd 16.0 su -110.2 hl
+471.0 -110.2 Hd 18.0 su -110.2 hl
+512.1 -110.2 Hd 18.0 su -110.2 hl
+568.2 -113.2 HD -12.0 ft
+633.9 -113.2 HD -12.0 ft
+361.8 -96.4 318.6 -96.4 306.9 -102.0 0 0.2 316.6 -97.4 363.8 -97.4 373.5 -102.2 306.9 -102.2 SL
+12.0 -140.2  bclef
+38.5 -137.2 HD
+99.4 -137.2 Hd 20.0 sd
+143.6 -125.2 Hd 20.0 sd
+194.5 -137.2 Hd 20.0 sd
+239.2 -137.2 Hd 20.0 sd
+304.9 -119.2 HD -12.0 sh
+375.5 -119.2 Hd -9.0 sh 20.0 sd
+420.3 -119.2 Hd -9.0 sh 20.0 sd
+471.0 -137.2 Hd 20.0 sd
+512.1 -137.2 Hd 20.0 sd
+568.2 -134.2 HD -12.0 ft
+633.9 -125.2 HD
+358.0 -129.9 317.9 -129.9 306.9 -124.4 0 -0.2 316.1 -128.9 359.8 -128.9 369.0 -124.2 306.9 -124.2 SL
+0 -163.20 T
+681.6 0 -148.2 staff
+681.6 0 -47.0 staff
+125.2 0.0 -148.2 bar
+125.2 0.0 -23.0 brace
+12.0 -47.0  tclef
+53.5 -35.0 HD -12.0 ft
+125.2 100.8 -148.2 bar 
+116.2 -32.0 Hd 20.0 su
+160.3 -32.0 Hd 20.0 su
+125.2 197.1 -148.2 bar 
+222.6 -35.0 Hd -9.0 ft 20.0 su
+264.8 -32.0 Hd 20.0 su
+125.2 299.5 -148.2 bar 
+316.7 -29.0 HD
+125.2 362.7 -148.2 bar 
+377.0 -29.0 Hd 20.0 su
+420.1 -35.0 Hd -9.0 ft 20.0 su
+125.2 455.4 -148.2 bar 
+469.7 -29.0 Hd 20.0 su
+514.9 -44.0 Hd 20.0 su
+125.2 546.4 -148.2 bar 
+567.9 -47.0 HD
+125.2 613.1 -148.2 bar 
+632.4 -47.0 HD
+125.2 681.6 -148.2 bar 
+364.9 -19.4 328.8 -19.4 318.7 -24.8 0 0.2 327.1 -20.4 366.6 -20.4 375.0 -25.0 318.7 -25.0 SL
+53.5 -41.0 HD -19.0 sh
+116.2 -38.0 Hd 20.0 sd
+160.3 -38.0 Hd 20.0 sd
+222.6 -41.0 Hd -16.0 sh 20.0 sd
+264.8 -38.0 Hd 20.0 sd
+316.7 -38.0 HD
+377.0 -38.0 Hd 20.0 sd
+420.1 -56.0 Hd -9.0 ft 16.0 sd -53.0 hl
+469.7 -38.0 Hd 20.0 sd
+511.0 -38.0 Hd 20.0 sd
+567.9 -41.0 HD -12.0 sh
+632.4 -38.0 HD
+361.1 -48.5 328.1 -48.5 318.7 -43.2 0 -0.2 326.6 -47.5 362.6 -47.5 370.5 -43.0 318.7 -43.0 SL
+13.0 F2 44.4 -87.0 M (sol) show 70.8 -87.0 whf 94.8 -87.0 whf 108.3 -87.0 M (ve) show 150.6 -87.0 M (pol) show 178.4 -87.0 whf 202.2 -87.0 whf 215.6 -87.0 M (lu) show 241.1 -87.0 whf 259.1 -87.0 M (ti) show 310.0 -87.0 M (la) show 333.9 -87.0 whf 365.0 -87.0 whf 396.1 -87.0 whf 413.1 -87.0 M (bi) show 432.7 -87.0 whf 453.6 -87.0 whf 465.5 -87.0 M (i) show 504.0 -87.0 M (re) show 525.2 -87.0 whf 549.2 -87.0 whf 562.8 -87.0 M (a) show 580.1 -87.0 whf 605.6 -87.0 whf 619.8 -87.0 M (tum,) show 
+53.5 -112.2 HD -118.2 hl1 -112.2 hl1
+116.2 -112.2 Hd 16.0 su -118.2 hl -112.2 hl
+160.3 -112.2 Hd 16.0 su -118.2 hl -112.2 hl
+222.6 -112.2 Hd 16.0 su -118.2 hl -112.2 hl
+264.8 -112.2 Hd 16.0 su -118.2 hl -112.2 hl
+316.7 -112.2 HD -118.2 hl1 -112.2 hl1
+377.0 -112.2 Hd 16.0 su -118.2 hl -112.2 hl
+420.1 -112.2 Hd 16.0 su -118.2 hl -112.2 hl
+469.7 -124.2 Hd 20.0 su
+511.0 -115.2 Hd 16.0 su -118.2 hl
+567.9 -121.2 HD -12.0 ft
+632.4 -118.2 HD -118.2 hl1
+364.9 -102.6 328.8 -102.6 318.7 -108.0 0 0.2 327.1 -103.6 366.6 -103.6 375.0 -108.2 318.7 -108.2 SL
+12.0 -148.2  bclef
+53.5 -133.2 HD
+116.2 -139.2 Hd 20.0 sd
+160.3 -145.2 Hd 20.0 sd
+222.6 -133.2 Hd 20.0 sd
+264.8 -145.2 Hd 20.0 sd
+316.7 -124.2 HD
+377.0 -124.2 Hd 20.0 sd
+420.1 -127.2 Hd -9.0 sh 20.0 sd
+469.7 -130.2 Hd 20.0 sd
+511.0 -136.2 Hd 20.0 sd
+567.9 -133.2 HD
+632.4 -145.2 HD
+361.1 -133.7 328.1 -133.7 318.7 -128.4 0 -0.2 326.6 -132.7 362.6 -132.7 370.5 -128.2 318.7 -128.2 SL
+0 -171.20 T
+282.6 0 -156.2 staff
+282.6 0 -47.0 staff
+133.2 0.0 -156.2 bar
+133.2 0.0 -23.0 brace
+12.0 -47.0  tclef
+40.9 -32.0 Hd 9.0 0 dt 20.0 su
+92.8 -35.0 hd -9.0 ft 1 20.0 sfu
+118.4 -29.0 hd 1 20.0 sfu
+133.2 140.7 -156.2 bar 
+162.2 -47.0 HD
+133.2 208.9 -156.2 bar 
+227.7 -47.0 HD
+133.2 279.6 -156.2 thbar 133.2 276.6 -156.2 bar 
+40.9 -38.0 Hd 9.0 0 dt 20.0 sd
+92.8 -56.0 hd -9.0 ft 1 20.0 sfd -53.0 hl
+118.4 -38.0 hd 1 20.0 sfd
+162.2 -41.0 HD -12.0 sh
+227.7 -38.0 HD
+13.0 F2 30.0 -91.0 M (San) show 65.6 -91.0 whf 83.7 -91.0 M (cte) show 111.1 -91.0 M (Io) show 136.9 -91.0 whf 154.3 -91.0 M (an) show 178.0 -91.0 whf 202.6 -91.0 whf 216.4 -91.0 M (nes.) show 
+40.9 -120.2 Hd 9.0 3 dt 16.0 su -126.2 hl -120.2 hl
+92.8 -120.2 hd 1 20.0 sfu -126.2 hl -120.2 hl
+118.4 -132.2 hd 1 20.0 sfu
+162.2 -129.2 HD -12.0 ft
+227.7 -126.2 HD -126.2 hl1
+12.0 -156.2  bclef
+40.9 -132.2 Hd 9.0 3 dt 20.0 sd
+92.8 -135.2 hd -9.0 sh 1 20.0 sfd
+118.4 -138.2 hd 1 20.0 sfd
+162.2 -141.2 HD
+227.7 -153.2 HD
+0 -179.20 T
+%%PageTrailer
+grestore
+showpage
+%%Trailer
+%%Pages: 1
+%EOF
