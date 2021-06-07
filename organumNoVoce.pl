@@ -3,6 +3,7 @@
 # use Data::Dumper;
 # use MIDI;
 
+use lib "."; # local class
 require "kirchenmodes.ph";
 require "tariffa.ph";
 require "lyrics.ph";

@@ -31,7 +31,8 @@ SAMPLE INVOCATIONS
 organum.pl -li 6 -csn 6 -mi 6 -pi "5656" -tempo 180 -4part -vl 2 -o VeniCreator
 
 # use a random set of tables
-organum.pl -li 6 -csn 6 -mi 6 -rnd -tempo 180 -4part -vl 2 -o VeniCreator
+./organum.pl -li 5 -csn 4 -mi 6 -rnd -tempo 180 -4part -vl 2 -o VeniCreator
+./organum.pl -li 6 -csn 6 -mi 6 -rnd -tempo 180 -4part -vl 2 -o VeniCreator
 
 # ghostscript to jpeg conversion
 gs -r300 -sDEVICE=jpeg -sOutputFile=VeniCreator_%d.jpg VeniCreatorSample.ps -c quit
